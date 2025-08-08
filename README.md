@@ -7,7 +7,7 @@
 ## ✨ Overview
 
 **Creative Language Translator** goes beyond conventional translation tools by offering the ability to:
-- Translate between 30+ languages with tone/style preservation.
+- Translate between 20+ languages with tone/style preservation.
 - Adapt the translation to regional dialects and idiomatic expressions.
 - Transform content into poems, lyrics, Shakespearean prose, and more using LLM-based generation.
 - Offer AI-based verification for tone and fidelity.
@@ -59,6 +59,7 @@ Install Ollama.exe from https://ollama.com/
 pip install streamlit deep-translator pandas langid langdetect ollama
 ollama run phi3
 streamlit run login.py
+
 
 
 
