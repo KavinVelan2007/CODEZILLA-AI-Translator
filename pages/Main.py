@@ -1,24 +1,3 @@
-#QUESTION
-'''
-Problem Statement GAI2: Creative Language Translator
-Context:
-Beyond literal translation, creative language tools can adapt tone and style. Generative AI can translate text while preserving nuance or even transform writing style (e.g., modern to Shakespearean). This hackathon challenge is to build an AI translator that maintains the original voice and style of the content.
-
-Challenge:
-Develop an AI translation system that converts text between languages or writing styles while preserving meaning and tone.
-
-Core Requirements:
-- Translate text between at least two languages (e.g., English⇆Spanish) or transform text style (formal to casual, prose to poetry).
-- Maintain the original meaning, tone, and style in the output.
-- Provide options for specifying target style or dialect.
-
-Bonus Features:
-- Support creative rephrasing (e.g., turn input into a poem or song lyrics).
-- Include idiomatic or slang translation handling for more natural output.
-'''
-
-#bolt.ai or wix.ai
-
 # --- IMPORTS ---
 import os
 import sys
@@ -206,8 +185,6 @@ language_dialect_options = {
 }
 
 # --- TRANSLATION FUNCTIONS ---
-
-# --- TRANSLATION FUNCTIONS ---
 def detect_language(text):
     lang, conf = langid.classify(text)
     return lang
@@ -357,7 +334,7 @@ if st.session_state.get("logged_in", False):
 
     col1, col2 = st.columns(2, gap="large")
 
-    # ---- COLUMN 1: Source ----
+    # --- COLUMN 1 ---
     with col1:
         st.markdown("#### Source Language")
         src_language_options = ["Auto Detect"] + languages
@@ -405,7 +382,7 @@ if st.session_state.get("logged_in", False):
         llm_verify_box = st.checkbox("Use LLM verification for translation accuracy", value=True, key="llm_verify_box")
         translate_clicked = st.button("#### Translate", key="translate_btn")
 
-    # ---- COLUMN 2: Target ----
+    # --- COLUMN 2 ---
     with col2:
         st.markdown("#### Target Language")
         target_language_options = [l for l in languages if l != selected_src_language]
@@ -465,7 +442,7 @@ if st.session_state.get("logged_in", False):
             }
             df = pd.concat([df, pd.DataFrame([new_entry])], ignore_index=True)
             df.to_csv("history.csv", index=False)
-            # Show result
+            
             output_placeholder.markdown(
                 f'<div style="background: {OUTPUT_BG}; color: {TEXT_COLOR}; border-radius: 13px; '
                 f'box-shadow: 0 1px 6px #d1d5db33; padding: 1.3em 1.1em 1.3em 1.1em; font-size: 1.11em; min-height: 60px;">'
@@ -486,7 +463,7 @@ with st.sidebar:
         st.session_state['username'] = None
         st.switch_page("login.py")
 
-#Side Bar color
+# --- SIDEBAR COLOR ---
 st.markdown(
     """
     <style>
@@ -498,7 +475,7 @@ st.markdown(
     unsafe_allow_html=True)
 
 
-#page bg
+# --- PAGE BACKGROUND ---
 page_bg_img = '''
 <style>
 [data-testid="stAppViewContainer"] {
