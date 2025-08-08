@@ -1,0 +1,6 @@
+pandas
+deep-translator
+streamlit
+langdetect
+ollama
+langid
