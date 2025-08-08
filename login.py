@@ -1,3 +1,4 @@
+# --- IMPORTS ---
 import streamlit as st
 import pandas as pd
 
@@ -9,13 +10,11 @@ OUTPUT_BG = "#fff"
 TEXT_COLOR = "#22272c"
 ACCENT_PURPLE = "#8658fb"
 
-# Page config
+# --- PAGE CONFIG ---
 st.set_page_config(layout="wide")
 
 
 # --- SIDEBAR ---
-
-#Side Bar color
 st.markdown(
     """
     <style>
@@ -46,13 +45,10 @@ st.sidebar.markdown(
     unsafe_allow_html=True
 )
 
-
-
-
 col1,col2,col3 = st.columns(3)
 with col2:
     st.markdown("<h1 style='color: #000000;'>Login or Sign In</h1>", unsafe_allow_html=True) #
-    # st.title("Login or Sign In")
+
     username = st.text_input("Username")
     password = st.text_input("Password", type="password")
 
@@ -83,35 +79,3 @@ with cols[3]:
 with cols[5]:
     if st.button("Create Account", key="create_account_button"):
         st.switch_page(page="pages/create.py")
-
-
-# page_bg_img = '''
-# <style>
-# [data-testid="stAppViewContainer"] {
-# background-image: url("https://wallpapers.com/images/featured/4k-background-fd313fxzl511betu.jpg");
-# background-size: cover;
-# }
-# </style>
-# '''
-# st.markdown(page_bg_img, unsafe_allow_html=True)
-
-
-# For hiding top part
-# st.markdown(
-#         """
-#         <style>
-#         [data-testid="stHeader"] { 
-#             background-color:   #235c4d  ; 
-#         }
-#         </style>
-#         """,##ccf2ff #215e4b
-#         unsafe_allow_html=True
-#     )
-
-# hide_streamlit_style = """
-# <style>
-#     #root > div:nth-child(1) > div > div > div > div > section > div {padding-top: 0rem;}
-# </style>
-
-# """
-# st.markdown(hide_streamlit_style, unsafe_allow_html=True)
