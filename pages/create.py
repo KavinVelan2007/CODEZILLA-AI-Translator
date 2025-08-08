@@ -1,3 +1,4 @@
+# --- IMPORTS ---
 import streamlit as st
 import pandas as pd
 
@@ -30,7 +31,7 @@ st.sidebar.markdown(
     unsafe_allow_html=True
 )
 
-# Page config
+# --- COLUMNS ---
 
 col1 , col2 , col3 = st.columns(3)
 
@@ -75,7 +76,7 @@ with cols[5]:
         st.switch_page(page="login.py")
 
 
-#Side Bar color
+# --- SIDEBAR COLOR ---
 st.markdown(
     """
     <style>
@@ -86,18 +87,7 @@ st.markdown(
     """,
     unsafe_allow_html=True)
 
-
-#page bg
-# page_bg_img = '''
-# <style>
-# [data-testid="stAppViewContainer"] {
-# background-image: url("https://wallpapers.com/images/featured/plain-blue-dmlktw5iuzdjvb7j.jpg");
-# background-size: cover;
-# }
-# </style>
-# '''
-# st.markdown(page_bg_img, unsafe_allow_html=True)
-
+# --- BACKGROUND COLOR ---
 
 st.markdown(
         """
