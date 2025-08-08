@@ -53,10 +53,12 @@ This project was developed for the **GAI2 Hackathon Challenge** focused on creat
 
 ### 📦 Install Dependencies
 
-```bash
-pip install streamlit deep-translator pandas langid langdetect ollama
+Install Ollama.exe from https://ollama.com/
 
 ```bash
+pip install streamlit deep-translator pandas langid langdetect ollama
+ollama run phi3
 streamlit run Main.py
+
 
 
