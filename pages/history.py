@@ -1,3 +1,4 @@
+# --- IMPORTS ---
 import streamlit as st
 import pandas as pd
 
@@ -102,6 +103,8 @@ if st.session_state.get("logged_in", False):
     }
     </style>
     """,
-    unsafe_allow_html=True)
+    unsafe_allow_html=True
+    )
+    
 else:
     st.title("You must be logged in to view this page.")
