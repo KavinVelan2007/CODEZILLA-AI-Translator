@@ -20,7 +20,7 @@ This project was developed for the **GAI2 Hackathon Challenge** focused on creat
 
 | Feature                        | Description                                                                 |
 |-------------------------------|-----------------------------------------------------------------------------|
-| 🔁 Language Translation        | Translate between 30+ supported languages.                                 |
+| 🔁 Language Translation        | Translate between 10+ supported languages.                                 |
 | 🎭 Style Adaptation            | Convert writing style (Formal, Poetic, Casual, Storytelling, etc.).        |
 | 🌐 Dialect Control             | Choose specific dialects (e.g., UK English, Latin American Spanish).       |
 | 🧠 LLM-Powered Generation      | Uses `Ollama` with `phi3` model for nuanced translation and adaptation.    |
@@ -48,7 +48,7 @@ This project was developed for the **GAI2 Hackathon Challenge** focused on creat
 ### 🔧 Prerequisites
 
 - Python 3.9+
-- Ollama installed and running
+- Ollama with phi3 installed and running
 - Virtual environment recommended
 
 ### 📦 Install Dependencies
@@ -59,6 +59,7 @@ Install Ollama.exe from https://ollama.com/
 pip install streamlit deep-translator pandas langid langdetect ollama
 ollama run phi3
 streamlit run login.py
+
 
 
 
